@@ -1,0 +1,2 @@
+# Ensure hook scripts always use LF so git can execute them on all platforms
+.husky/* text eol=lf
