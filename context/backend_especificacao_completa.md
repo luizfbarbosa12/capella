@@ -52,7 +52,7 @@ musica-joinville/
 │   │   ├── test/                  # Testes E2E
 │   │   └── [config files]         # .env, .prettierrc, .eslintrc, jest.config, tsconfig, package.json
 │   │
-│   ├── web/                       # Frontend Next.js
+   ├── web/                       # Frontend React + Vite
 │   └── mobile/                    # React Native Expo
 │
 └── packages/

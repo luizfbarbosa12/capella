@@ -256,15 +256,15 @@ Value entregue: A cada 2 semanas (não só no final)
 
 ---
 
-## Risco Técnico: MongoDB Performance em Queries Complexas
+## Risco Técnico: Performance em Queries de Sobreposição Temporal (PostgreSQL)
 
 **Probabilidade:** Baixa
 
-**Impacto:** Baixo (calendário fica lento)
+**Impacto:** Baixo (detecção de conflito fica lenta em alto volume)
 
 **Mitigação:**
 
-- ✅ **Indexação estratégica** (musician_id, event_date)
+- ✅ **Índices compostos em `(dateStart, dateEnd)` e `date`** (cobre as queries de overlap temporal)
 - ✅ **Cache de calendário** (Redis futuro)
 - ✅ **Pagination** (não carrega todos eventos de uma vez)
 
@@ -276,9 +276,9 @@ Value entregue: A cada 2 semanas (não só no final)
 
 | Item | Status | Timeline | Impacto |
 | --- | --- | --- | --- |
-| **Confirmação de Stack** | ⏳ Aguardando | HOJE | Alto - Bloqueia start Sprint 1 |
+| **Stack** | ✅ Confirmado | — | NestJS + PostgreSQL + Prisma · React + Vite · React Native Expo |
 | **Repositório GitHub** | ⏳ Aguardando | Amanhã | Médio - Bloqueia dev |
-| **MongoDB Atlas** | ✅ Free | Imediato | Baixo - Pode criar agora |
+| **PostgreSQL (Neon/Supabase)** | ✅ Free tier | Imediato | Baixo - Pode criar agora |
 | **Everton Feedback UI** | ⏳ Aguardando | Essa semana | Alto - Garante adoção |
 
 ---

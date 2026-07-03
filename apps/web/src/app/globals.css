@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Design Tokens ─────────────────────────────────────── */
+
+:root {
+  /* Brand */
+  --color-primary:          #7A1515;
+  --color-primary-hover:    #991C1C;
+  --color-primary-dark:     #3D0808;
+
+  /* Neutrals — light mode */
+  --color-bg:               #FAF5F5;
+  --color-surface:          #FFFFFF;
+  --color-border:           #F2E8E8;
+  --color-text:             #1A0505;
+  --color-text-secondary:   #9E7E7E;
+
+  /* Semantic */
+  --color-success:          #2D7A4A;
+  --color-warning:          #B87414;
+  --color-danger:           #C0392B;
+  --color-info:             #2563EB;
+}
+
+.dark {
+  /* Neutrals — dark mode */
+  --color-bg:               #1A0505;
+  --color-surface:          #3A1A1A;
+  --color-border:           #5C2A2A;
+  --color-text:             #FFFFFF;
+  --color-text-secondary:   #E8D5D5;
+}
+
+/* ─── Base ───────────────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
