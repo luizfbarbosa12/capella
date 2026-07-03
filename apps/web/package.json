@@ -11,8 +11,8 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "test": "vitest",
-    "test:run": "vitest run",
-    "test:cov": "vitest run --coverage",
+    "test:run": "vitest run --passWithNoTests",
+    "test:cov": "vitest run --coverage --passWithNoTests",
     "prepare": "cd ../.. && husky"
   },
   "lint-staged": {
