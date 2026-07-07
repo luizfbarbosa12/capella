@@ -13,6 +13,27 @@
 | 🟡 P2 | Média prioridade — melhoria significativa |
 | 🟢 P3 | Baixa prioridade — nice-to-have |
 | F0–F3 | Fase de entrega (0 = Scary Skeleton … 3 = Google Calendar) |
+| ⚪ | Não iniciado |
+| 🟡 | Em andamento (parcialmente implementado) |
+| 🟢 | Concluído |
+
+---
+
+## STATUS DE IMPLEMENTAÇÃO
+> Atualizado em: 03 de julho de 2026
+
+| Épico | Status | Notas de implementação |
+|---|---|---|
+| EP-DO03 | 🟢 Concluído | `ci.yml`, `release.yml` e `.releaserc.json` implementados e corretos. Branch protection pendente (GitHub Settings). |
+| EP-DO01 | 🟡 Em andamento | Estrutura de pastas criada (`apps/api`, `apps/web`, `apps/mobile`, `packages/types`). `.gitignore` e `.env.example` configurados. Docker/Prisma/migrations/seeder pendentes — `apps/api` vazio. |
+| EP-DO02 | 🟡 Em andamento | Prettier + ESLint (TypeScript + `no-explicit-any` + `no-restricted-imports`) + Husky/lint-staged configurados. Vitest + RTL + MSW instalados. Testes não escritos ainda. |
+| EP-DS01 | 🟡 Em andamento | Tokens CSS (`globals.css`) + Tailwind config (cores, fontes, radius, shadows) + Google Fonts (preload + `display=swap`) prontos. Dark mode padrão (`class="dark"` no `<html>`). Figma e documentação formal pendentes. |
+| EP-F01 | 🟡 Em andamento | Vite + React + TS inicializado. Design tokens aplicados. Path aliases configurados. `vercel.json` criado. Dependências instaladas (React Router, TanStack Query, Zustand, Axios, RHF+Zod, Radix UI, Lucide, date-fns). Shell (sidebar, topbar, rotas) **não implementado**. |
+| EP-B01 – EP-B07 | ⚪ Não iniciado | `apps/api/` vazio (apenas `.gitkeep`). |
+| EP-F02 – EP-F09 | ⚪ Não iniciado | Subpastas de `src/` criadas, todas com apenas `.gitkeep`. |
+| EP-M01 – EP-M07 | ⚪ Não iniciado | `apps/mobile/` vazio (apenas `.gitkeep`). |
+| EP-DO04 · EP-DO05 | ⚪ Não iniciado | — |
+| EP-DS02 – EP-DS05 | ⚪ Não iniciado | — |
 
 ---
 
@@ -30,7 +51,7 @@
 ---
 
 ## EP-B01 · Autenticação e Autorização
-**Fase:** F0 | **Prioridade:** 🔴 P0  
+**Fase:** F0 | **Prioridade:** 🔴 P0 | **Status:** ⚪ Não iniciado  
 **Módulo NestJS:** `auth/` + `users/`
 
 ### Objetivo
@@ -64,7 +85,7 @@ Permitir que coordenadores e músicos acessem o sistema com segurança, com cont
 ---
 
 ## EP-B02 · Módulo de Eventos
-**Fase:** F0 | **Prioridade:** 🔴 P0  
+**Fase:** F0 | **Prioridade:** 🔴 P0 | **Status:** ⚪ Não iniciado  
 **Módulo NestJS:** `events/`
 
 ### Objetivo
@@ -101,7 +122,7 @@ CRUD completo de eventos com rastreamento de alterações e ciclo de vida por st
 ---
 
 ## EP-B03 · Módulo de Músicos
-**Fase:** F1 | **Prioridade:** 🔴 P0  
+**Fase:** F1 | **Prioridade:** 🔴 P0 | **Status:** ⚪ Não iniciado  
 **Módulo NestJS:** `musicians/`
 
 ### Objetivo
@@ -132,7 +153,7 @@ Gerenciar o cadastro de músicos, seus instrumentos e períodos de indisponibili
 ---
 
 ## EP-B04 · Módulo de Alocações e Detecção de Conflito
-**Fase:** F1 | **Prioridade:** 🔴 P0 — CRÍTICO  
+**Fase:** F1 | **Prioridade:** 🔴 P0 — CRÍTICO | **Status:** ⚪ Não iniciado  
 **Módulo NestJS:** `allocations/`
 
 ### Objetivo
@@ -180,7 +201,7 @@ Se existir → retornar HTTP 400.
 ---
 
 ## EP-B05 · Notificações
-**Fase:** F1 (email) · F2 (push) | **Prioridade:** 🟠 P1  
+**Fase:** F1 (email) · F2 (push) | **Prioridade:** 🟠 P1 | **Status:** ⚪ Não iniciado  
 **Módulo NestJS:** `notifications/` (a criar)
 
 ### Objetivo
@@ -213,7 +234,7 @@ Notificar músicos sobre escalações e lembrar sobre eventos pendentes de confi
 ---
 
 ## EP-B06 · Módulo de Usuários (Perfil)
-**Fase:** F0 | **Prioridade:** 🟠 P1  
+**Fase:** F0 | **Prioridade:** 🟠 P1 | **Status:** ⚪ Não iniciado  
 **Módulo NestJS:** `users/`
 
 ### Funcionalidades
@@ -231,7 +252,7 @@ Notificar músicos sobre escalações e lembrar sobre eventos pendentes de confi
 ---
 
 ## EP-B07 · Integração Google Calendar
-**Fase:** F3 | **Prioridade:** 🟡 P2
+**Fase:** F3 | **Prioridade:** 🟡 P2 | **Status:** ⚪ Não iniciado
 
 ### Objetivo
 Sincronizar a agenda do músico com o Google Calendar para detecção automática de disponibilidade.
@@ -258,7 +279,7 @@ Sincronizar a agenda do músico com o Google Calendar para detecção automátic
 ---
 
 ## EP-F01 · Setup e Shell da Aplicação Web
-**Fase:** F0 | **Prioridade:** 🔴 P0
+**Fase:** F0 | **Prioridade:** 🔴 P0 | **Status:** 🟡 Em andamento
 
 ### Objetivo
 Estrutura base da aplicação web com navegação, autenticação de rota e shell visual responsivo.
@@ -288,7 +309,7 @@ Estrutura base da aplicação web com navegação, autenticação de rota e shel
 ---
 
 ## EP-F02 · Autenticação Web
-**Fase:** F0 | **Prioridade:** 🔴 P0
+**Fase:** F0 | **Prioridade:** 🔴 P0 | **Status:** ⚪ Não iniciado
 
 ### Telas
 - `/login` — Splash + formulário de login
@@ -318,7 +339,7 @@ Estrutura base da aplicação web com navegação, autenticação de rota e shel
 ---
 
 ## EP-F03 · Dashboard — Coordenador
-**Fase:** F0 | **Prioridade:** 🔴 P0  
+**Fase:** F0 | **Prioridade:** 🔴 P0 | **Status:** ⚪ Não iniciado  
 **Rota:** `/dashboard`
 
 ### Funcionalidades
@@ -342,7 +363,7 @@ Estrutura base da aplicação web com navegação, autenticação de rota e shel
 ---
 
 ## EP-F04 · Agenda — 4 Visualizações de Calendário
-**Fase:** F0 (Month) · F1 (Week/Day) · F1 (Year) | **Prioridade:** 🔴 P0  
+**Fase:** F0 (Month) · F1 (Week/Day) · F1 (Year) | **Prioridade:** 🔴 P0 | **Status:** ⚪ Não iniciado  
 **Rota base:** `/agenda/:view` → `/agenda/year`, `/agenda/month`, `/agenda/week`, `/agenda/day`
 
 ### Funcionalidades
@@ -401,7 +422,7 @@ Estrutura base da aplicação web com navegação, autenticação de rota e shel
 ---
 
 ## EP-F05 · Gestão de Eventos — CRUD
-**Fase:** F0 | **Prioridade:** 🔴 P0
+**Fase:** F0 | **Prioridade:** 🔴 P0 | **Status:** ⚪ Não iniciado
 
 ### Telas
 - `/eventos/novo` — Formulário de criação
@@ -448,7 +469,7 @@ Campos em ordem de rolagem única (não multi-step):
 ---
 
 ## EP-F06 · Painel de Alocação (Escalar Músico)
-**Fase:** F1 | **Prioridade:** 🔴 P0  
+**Fase:** F1 | **Prioridade:** 🔴 P0 | **Status:** ⚪ Não iniciado  
 **Rota:** `/eventos/:id/escalar`
 
 ### Funcionalidades
@@ -485,7 +506,7 @@ Campos em ordem de rolagem única (não multi-step):
 ---
 
 ## EP-F07 · Gestão de Músicos (Roster)
-**Fase:** F1 | **Prioridade:** 🟠 P1  
+**Fase:** F1 | **Prioridade:** 🟠 P1 | **Status:** ⚪ Não iniciado  
 **Rotas:** `/musicos` · `/musicos/novo` · `/musicos/:id`
 
 ### Funcionalidades
@@ -520,7 +541,7 @@ Campos em ordem de rolagem única (não multi-step):
 ---
 
 ## EP-F08 · Central de Notificações Web
-**Fase:** F1 | **Prioridade:** 🟠 P1  
+**Fase:** F1 | **Prioridade:** 🟠 P1 | **Status:** ⚪ Não iniciado  
 **Rota:** `/notificacoes`
 
 ### Funcionalidades
@@ -546,7 +567,7 @@ Campos em ordem de rolagem única (não multi-step):
 ---
 
 ## EP-F09 · Perfil e Configurações Web
-**Fase:** F0 | **Prioridade:** 🟠 P1  
+**Fase:** F0 | **Prioridade:** 🟠 P1 | **Status:** ⚪ Não iniciado  
 **Rota:** `/perfil`
 
 ### Funcionalidades
@@ -573,7 +594,7 @@ Campos em ordem de rolagem única (não multi-step):
 ---
 
 ## EP-M01 · Setup e Shell do App Mobile
-**Fase:** F2 | **Prioridade:** 🟠 P1
+**Fase:** F2 | **Prioridade:** 🟠 P1 | **Status:** ⚪ Não iniciado
 
 ### Objetivo
 Estrutura base do app React Native Expo com navegação, safe areas, design system aplicado e stack configurada.
@@ -606,7 +627,7 @@ Estrutura base do app React Native Expo com navegação, safe areas, design syst
 ---
 
 ## EP-M02 · Autenticação Mobile
-**Fase:** F2 | **Prioridade:** 🔴 P0 (para o app)
+**Fase:** F2 | **Prioridade:** 🔴 P0 (para o app) | **Status:** ⚪ Não iniciado
 
 ### Telas
 - `LoginScreen` — formulário de login
@@ -623,7 +644,7 @@ Estrutura base do app React Native Expo com navegação, safe areas, design syst
 ---
 
 ## EP-M03 · Meus Eventos — Tela Principal do Músico
-**Fase:** F2 | **Prioridade:** 🔴 P0 (para músico)  
+**Fase:** F2 | **Prioridade:** 🔴 P0 (para músico) | **Status:** ⚪ Não iniciado  
 **Tela:** `MyEventsScreen`
 
 ### Funcionalidades
@@ -647,7 +668,7 @@ Estrutura base do app React Native Expo com navegação, safe areas, design syst
 ---
 
 ## EP-M04 · Confirmação de Gig — Tela Crítica do Músico
-**Fase:** F2 | **Prioridade:** 🔴 P0 (CRÍTICO — 1 tap da notificação)
+**Fase:** F2 | **Prioridade:** 🔴 P0 (CRÍTICO — 1 tap da notificação) | **Status:** ⚪ Não iniciado
 
 ### Entry points
 - Push notification → deep link direto
@@ -677,7 +698,7 @@ Estrutura base do app React Native Expo com navegação, safe areas, design syst
 ---
 
 ## EP-M05 · Calendário Mobile
-**Fase:** F2 | **Prioridade:** 🟠 P1  
+**Fase:** F2 | **Prioridade:** 🟠 P1 | **Status:** ⚪ Não iniciado  
 **Tela:** `CalendarScreen`
 
 ### Funcionalidades
@@ -697,7 +718,7 @@ Estrutura base do app React Native Expo com navegação, safe areas, design syst
 ---
 
 ## EP-M06 · Solicitação de Folga
-**Fase:** F2 | **Prioridade:** 🟡 P2  
+**Fase:** F2 | **Prioridade:** 🟡 P2 | **Status:** ⚪ Não iniciado  
 **Tela:** `DayOffRequestScreen`
 
 ### Funcionalidades
@@ -716,7 +737,7 @@ Estrutura base do app React Native Expo com navegação, safe areas, design syst
 ---
 
 ## EP-M07 · Push Notifications Mobile
-**Fase:** F2 | **Prioridade:** 🟠 P1
+**Fase:** F2 | **Prioridade:** 🟠 P1 | **Status:** ⚪ Não iniciado
 
 ### Funcionalidades
 - Integração FCM via `expo-notifications`
@@ -741,13 +762,13 @@ Estrutura base do app React Native Expo com navegação, safe areas, design syst
 ---
 
 ## EP-DO01 · Setup de Infraestrutura Local e Monorepo
-**Fase:** F0 | **Prioridade:** 🔴 P0
+**Fase:** F0 | **Prioridade:** 🔴 P0 | **Status:** 🟡 Em andamento
 
 ### Objetivo
 Ambiente de desenvolvimento funcional desde o dia 1, com banco de dados, variáveis de ambiente e estrutura de monorepo configurados.
 
 ### Funcionalidades
-- Monorepo com estrutura `apps/api`, `apps/web`, `apps/mobile`, `packages/core`
+- Monorepo com estrutura `apps/api`, `apps/web`, `apps/mobile`, `packages/types`
 - Docker Compose com PostgreSQL 15 para desenvolvimento local
 - `.env.example` com todas as variáveis documentadas (sem valores reais)
 - Arquivos `.env.development`, `.env.test`, `.env.production` separados
@@ -770,7 +791,7 @@ Ambiente de desenvolvimento funcional desde o dia 1, com banco de dados, variáv
 ---
 
 ## EP-DO02 · Qualidade de Código — Linting, Formatação e Testes
-**Fase:** F0 | **Prioridade:** 🔴 P0
+**Fase:** F0 | **Prioridade:** 🔴 P0 | **Status:** 🟡 Em andamento
 
 ### Objetivo
 Garantir consistência de código e cobertura mínima de testes antes de qualquer CI/CD.
@@ -778,9 +799,11 @@ Garantir consistência de código e cobertura mínima de testes antes de qualque
 ### Funcionalidades
 - Prettier configurado: semicolons, trailing commas, single quotes, print-width 80, tab-width 2, LF line endings
 - ESLint com plugin TypeScript: `no-explicit-any` como warning
+- ESLint frontend: regra `no-restricted-imports` para proibir imports entre domínios (`domains/*`)
 - Conventional Commits como padrão: `feat:`, `fix:`, `docs:`, `refactor:`, `test:`, `chore:`, `ci:`
-- Cobertura mínima de 80% nas services (Unit tests com Jest)
-- Testes E2E com Jest + Supertest cobrindo fluxos principais
+- Cobertura mínima: ≥ 80% nas services do **backend** (Jest) · ≥ 70% nos hooks de domínio do **frontend** (Vitest + React Testing Library)
+- Testes E2E backend: Jest + Supertest cobrindo fluxos principais
+- Testes E2E frontend: Playwright cobrindo fluxos de login, criação de evento e confirmação de gig
 
 ### Casos de teste obrigatórios
 
@@ -802,9 +825,10 @@ Garantir consistência de código e cobertura mínima de testes antes de qualque
 - Músico rejeita com motivo
 
 ### Critérios de aceite
-- [ ] `npm run lint` sem erros
-- [ ] `npm run format` sem diff após execução
-- [ ] `npm run test:cov` reporta ≥ 80% de cobertura nas services
+- [x] `npm run lint` sem erros
+- [x] `npm run format` sem diff após execução
+- [ ] `npm run test:cov` reporta ≥ 80% de cobertura nas services do backend
+- [ ] Vitest reporta ≥ 70% de cobertura nos hooks de domínio do frontend
 - [ ] Todos os casos de teste obrigatórios passando
 
 ### Dependências
@@ -812,59 +836,65 @@ Garantir consistência de código e cobertura mínima de testes antes de qualque
 
 ---
 
-## EP-DO03 · Pipeline CI/CD — GitHub Actions
+## EP-DO03 · Pipeline CI — GitHub Actions
 **Fase:** F0 | **Prioridade:** 🔴 P0
 
 ### Objetivo
-Pipeline automatizado que garante qualidade em todo push e PR, e faz deploy automático ao merge no `main`.
+Pipeline de CI automatizado que garante qualidade em todo push e PR. Deploy é **manual** até que o CD seja implementado em fase futura.
 
-### Pipeline Principal (`test-and-build.yml`)
-Disparado em: push e PR para `main` e `develop`
+### Pipeline de CI (`ci.yml`)
+Disparado em: push em `staging` + PRs para `staging` ou `main`
 
 | Job | Ações | Depende de |
 |---|---|---|
-| `lint-and-format` | Prettier check + ESLint | — |
-| `test` | Unit tests + coverage; PostgreSQL via service container | — |
-| `build` | Compila TypeScript → `dist/` | `lint-and-format`, `test` |
-| `e2e-tests` | Testes E2E contra banco real | `build` |
-| `security-scan` | `npm audit` + OWASP Dependency Check | — |
-| `merge-check` | Valida que todos os jobs passaram | Todos |
+| `lint-and-type-check` | ESLint + Prettier check + `tsc --noEmit` | — |
+| `test` | Unit tests + coverage | — |
+| `build` | Compila TypeScript → `dist/` (backend) / `vite build` (frontend) | `lint-and-type-check`, `test` |
 
-### Pipeline de Deploy (`deploy.yml`)
-Disparado em: push no `main` após sucesso do pipeline principal
-- Instala Vercel CLI
-- Deploy para produção usando `VERCEL_TOKEN` e `VERCEL_ORG_ID` (secrets do repositório)
+### Release Automático (`release.yml`)
+Disparado em: push no `main` — semantic-release lê os commits desde a última tag e cria tag + GitHub Release automaticamente.
+- Requer `.releaserc.json` na raiz com plugins: `commit-analyzer`, `release-notes-generator`, `github`
+- `GITHUB_TOKEN` é injetado automaticamente pelo GitHub Actions (nenhum secret manual necessário)
+- Se commits contiverem apenas `chore:` / `docs:`, nenhuma tag é criada (comportamento esperado)
+
+> **CD não implementado.** Deploy para `staging` e `production` é **manual** via Vercel CLI ou dashboard. Workflows de deploy (`deploy-staging.yml`, `deploy-production.yml`) serão adicionados quando a infraestrutura estiver definida. Secrets `VERCEL_TOKEN`, `VERCEL_ORG_ID` estão ⏳ pendentes.
 
 ### Branch Protection — `main`
-- Todos os status checks devem passar antes do merge
+- Todos os status checks devem passar antes do merge (`ci / lint-and-type-check`, `ci / test`, `ci / build`)
 - Mínimo 1 aprovação de revisor
 - Aprovações descartadas em novo push
 - Branch deve estar atualizada com a base
+- Force push e deleção proibidos
+
+### Branch Protection — `staging`
+- Status checks obrigatórios: `ci / lint-and-type-check`, `ci / test`, `ci / build`
+- Force push e deleção proibidos
 
 ### Critérios de aceite
-- [ ] PR sem testes passando não pode ser mergeado
-- [ ] PR sem aprovação não pode ser mergeado
-- [ ] Push no `main` aciona deploy automático
-- [ ] Segredos (`VERCEL_TOKEN`, JWT secrets, `DATABASE_URL`) nunca aparecem em logs
+- [ ] PR sem testes passando não pode ser mergeado em `staging` ou `main`
+- [ ] PR sem aprovação não pode ser mergeado em `main`
+- [x] Merge em `main` gera tag e GitHub Release automático via semantic-release
+- [x] Segredos (JWT secrets, `DATABASE_URL`) nunca aparecem em logs
 
 ### Dependências
-- EP-DO01 · EP-DO02 · Secrets configurados no repositório GitHub
+- EP-DO01 · EP-DO02 · Repositório GitHub configurado com branches `main` e `staging`
 
 ---
 
 ## EP-DO04 · Segurança e Variáveis de Ambiente de Produção
-**Fase:** F0 | **Prioridade:** 🔴 P0
+**Fase:** F0 | **Prioridade:** 🔴 P0 | **Status:** ⚪ Não iniciado
 
 ### Objetivo
 Garantir que a aplicação em produção seja segura, sem credenciais expostas e com CORS configurado corretamente.
 
 ### Funcionalidades
-- Todas as variáveis obrigatórias configuradas no Vercel (produção):
-  - `DATABASE_URL`, `JWT_SECRET`, `JWT_REFRESH_SECRET`, `JWT_EXPIRATION`
-  - `NODE_ENV=production`, `PORT`, `CORS_ORIGIN`, `LOG_LEVEL`
+- Todas as variáveis obrigatórias configuradas no Vercel por ambiente:
+  - **Backend:** `DATABASE_URL`, `JWT_SECRET`, `JWT_REFRESH_SECRET`, `JWT_EXPIRATION`
+  - **Backend:** `NODE_ENV=production`, `PORT`, `CORS_ORIGIN`, `LOG_LEVEL`
+  - **Frontend:** `VITE_API_URL` (URL da API por ambiente), `VITE_APP_ENV=production`
+  - **Opcionais:** `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`, `WHATSAPP_API_KEY`, `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`
 - CORS configurado via `CORS_ORIGIN` (lista de origens permitidas separadas por vírgula)
 - `npm audit` sem vulnerabilidades críticas ou high
-- OWASP Dependency Check integrado ao pipeline
 - Senhas hasheadas com bcrypt (rounds: 10) — nunca armazenadas em plain text
 - Variáveis sensíveis nunca hardcoded no código-fonte
 - Banco de produção provisionado com `prisma migrate deploy` (nunca `migrate dev` em prod)
@@ -880,7 +910,7 @@ Garantir que a aplicação em produção seja segura, sem credenciais expostas e
 ---
 
 ## EP-DO05 · Monitoramento e Observabilidade
-**Fase:** F2 | **Prioridade:** 🟡 P2
+**Fase:** F2 | **Prioridade:** 🟡 P2 | **Status:** ⚪ Não iniciado
 
 ### Funcionalidades
 - Log estruturado por nível (`LOG_LEVEL`): debug, info, warn, error
@@ -904,7 +934,7 @@ Garantir que a aplicação em produção seja segura, sem credenciais expostas e
 ---
 
 ## EP-DS01 · Design System Foundation
-**Fase:** F0 | **Prioridade:** 🔴 P0
+**Fase:** F0 | **Prioridade:** 🔴 P0 | **Status:** 🟡 Em andamento
 
 ### Objetivo
 Estabelecer os tokens de design e a linguagem visual base antes de qualquer tela ser prototipada.
@@ -946,7 +976,7 @@ Estabelecer os tokens de design e a linguagem visual base antes de qualquer tela
 ---
 
 ## EP-DS02 · Biblioteca de Componentes
-**Fase:** F0 | **Prioridade:** 🔴 P0
+**Fase:** F0 | **Prioridade:** 🔴 P0 | **Status:** ⚪ Não iniciado
 
 ### Objetivo
 Documentar e prototipar todos os componentes reutilizáveis antes da implementação das telas.
@@ -983,7 +1013,7 @@ Documentar e prototipar todos os componentes reutilizáveis antes da implementa�
 ---
 
 ## EP-DS03 · Telas Web — Wireframes e Protótipos
-**Fase:** F0–F1 | **Prioridade:** 🔴 P0
+**Fase:** F0–F1 | **Prioridade:** 🔴 P0 | **Status:** ⚪ Não iniciado
 
 ### Objetivo
 Entregar protótipos navegáveis de todas as telas web antes da implementação de cada fase.
@@ -1018,7 +1048,7 @@ Entregar protótipos navegáveis de todas as telas web antes da implementação 
 ---
 
 ## EP-DS04 · Telas Mobile — Wireframes e Protótipos
-**Fase:** F2 | **Prioridade:** 🟠 P1
+**Fase:** F2 | **Prioridade:** 🟠 P1 | **Status:** ⚪ Não iniciado
 
 ### Telas
 
@@ -1043,7 +1073,7 @@ Entregar protótipos navegáveis de todas as telas web antes da implementação 
 ---
 
 ## EP-DS05 · UX Writing e Microcopy
-**Fase:** F0 | **Prioridade:** 🟠 P1
+**Fase:** F0 | **Prioridade:** 🟠 P1 | **Status:** ⚪ Não iniciado
 
 ### Objetivo
 Garantir consistência de linguagem em toda a plataforma conforme a voz da marca Cappella.
@@ -1124,5 +1154,5 @@ EP-DO01 (infra local)
 
 ---
 
-*Documento gerado por análise de: guide.md · backend_especificacao_completa.md · ux-design-framework.md*  
-*Cappella — Música para Eventos, Joinville · 02 de julho de 2026*
+*Documento gerado por análise de: guide.md · backend_especificacao_completa.md · frontend_especificacao_completa.md · devops_especificacao.md · ux-design-framework.md*  
+*Cappella — Música para Eventos, Joinville · 02 de julho de 2026 · Revisado: 03 de julho de 2026*

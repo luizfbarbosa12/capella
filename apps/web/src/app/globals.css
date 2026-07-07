@@ -6,31 +6,31 @@
 
 :root {
   /* Brand */
-  --color-primary:          #7A1515;
-  --color-primary-hover:    #991C1C;
-  --color-primary-dark:     #3D0808;
+  --color-primary: #7a1515;
+  --color-primary-hover: #991c1c;
+  --color-primary-dark: #3d0808;
 
   /* Neutrals — light mode */
-  --color-bg:               #FAF5F5;
-  --color-surface:          #FFFFFF;
-  --color-border:           #F2E8E8;
-  --color-text:             #1A0505;
-  --color-text-secondary:   #9E7E7E;
+  --color-bg: #faf5f5;
+  --color-surface: #ffffff;
+  --color-border: #f2e8e8;
+  --color-text: #1a0505;
+  --color-text-secondary: #9e7e7e;
 
   /* Semantic */
-  --color-success:          #2D7A4A;
-  --color-warning:          #B87414;
-  --color-danger:           #C0392B;
-  --color-info:             #2563EB;
+  --color-success: #2d7a4a;
+  --color-warning: #b87414;
+  --color-danger: #c0392b;
+  --color-info: #2563eb;
 }
 
 .dark {
   /* Neutrals — dark mode */
-  --color-bg:               #1A0505;
-  --color-surface:          #3A1A1A;
-  --color-border:           #5C2A2A;
-  --color-text:             #FFFFFF;
-  --color-text-secondary:   #E8D5D5;
+  --color-bg: #1a0505;
+  --color-surface: #3a1a1a;
+  --color-border: #5c2a2a;
+  --color-text: #ffffff;
+  --color-text-secondary: #e8d5d5;
 }
 
 /* ─── Base ───────────────────────────────────────────────── */
